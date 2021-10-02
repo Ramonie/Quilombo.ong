@@ -18,9 +18,11 @@ from django.urls import path
 from app.views import home
 from app.views import login
 from app.views import cadastro
+from app.views import create
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     path('login/', login),
     path('cadastro/', cadastro), 
+    path('create/', create),
     ]

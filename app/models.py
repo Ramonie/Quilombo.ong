@@ -13,4 +13,5 @@ class Cadastro(models.Model):
     estado = models.CharField(max_length= 100 )
     email = models.CharField(max_length= 100 )
     senha = models.CharField(max_length= 50 )
+    confsenha =  models.CharField(max_length= 50,blank=True )
  

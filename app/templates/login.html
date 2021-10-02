@@ -6,6 +6,12 @@
 </head>
 <body>
 Login
-<a href="/cadastro"class="btn btn-info"> Cadastre-se</a>
+<a href="/cadastro"class="btn btn-info"> Cadastre-se</a></br>
+
+exibindo dados do banco
+ { % for dbs in db % }  
+ <th>{{dbs.id}} </th>
+<th>{{dbs.nome}} </th>
+ { % endfor % }
 </body>
 </html>
