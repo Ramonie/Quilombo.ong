@@ -4,6 +4,7 @@ from django.http import request
 from app.cadastro import CadastroForm
 from django.http import request
 
+
 # Create your views here.
 def home (request):
     return render (request , 'index.html')
