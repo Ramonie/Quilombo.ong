@@ -1,7 +1,7 @@
 from django import http
 from django.shortcuts import redirect, render
 from django.http import request
-from app.cadastro import CadastroForm
+#from app.cadastro import CadastroForm
 from django.http import request
 
 
@@ -11,16 +11,16 @@ def home (request):
 
 def login (request):
     data = {}
-    data ['db'] = CadastroForm.objects.all()
+#    data ['db'] = CadastroForm.objects.all()
     return render (request, 'login.html', data)
 
 def cadastro (request):
     data = {}
-    data['form'] = CadastroForm()
+#    data['form'] = CadastroForm()
     return render ( request ,'cadastro.html', data)
 
 def create (request):
-    form = CadastroForm(request.POST or None)
-    if form.is_valid():
-        form.save()
+#    form = CadastroForm(request.POST or None)
+#    if form.is_valid():
+#        form.save()
         return redirect('login.html')
