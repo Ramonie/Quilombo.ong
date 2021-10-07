@@ -21,8 +21,8 @@ from app.views import cadastro
 from app.views import create
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('login/', login),
+    path('', home, name='home'),
+    path('login/', login, name='login'),
     path('cadastro/', cadastro), 
     path('create/', create),
     ]

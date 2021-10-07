@@ -10,11 +10,11 @@ Login
 
 exibindo dados do banco
 
- { % for dbs in db % } 
+ {% for dbs in db %} 
  <tr>
- <th>{{dbs.id}} </th>
-<th>{{dbs.nome}} </th>
+    <th>{{dbs.id}} </th>
+    <th>{{dbs.nome}} </th>
 </tr>
- { % endfor % }
+ {% endfor %}
 </body>
 </html>

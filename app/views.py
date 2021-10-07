@@ -3,6 +3,7 @@ from django.shortcuts import redirect, render
 from django.http import request
 from app.cadastro import CadastroForm
 from django.http import request
+from app.models import  Cadastro
 
 
 # Create your views here.
@@ -11,7 +12,7 @@ def home (request):
 
 def login (request):
     data = {}
-    #data ['db'] = CadastroForm.objects.all()
+    data ['db'] = Cadastro.objects.all()
     return render (request, 'login.html', data)
 
 def cadastro (request):
@@ -23,4 +24,4 @@ def create (request):
     form = CadastroForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('login.html')
+        return redirect('login')
