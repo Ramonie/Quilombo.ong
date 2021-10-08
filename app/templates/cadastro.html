@@ -4,32 +4,65 @@
         <meta charset="UTF-8">
         <title>Cadastre-se</title>
         <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <style>
+     body{
+    background-color: #f0f0f0;
+}
+.formcadastro{
+    width: 400px;
+    margin: auto;
+    padding-top: 10px;
+}
+.card{
+    box-shadow: 1px 1px 5px #ccc;
+    background-color:#ccc;
+    padding: 30px;
+    border-radius: 5px;
+    width: 400px;
+    margin: auto;
+    padding-top: 40px;
+}
+.form_group mt-4{
+    text-align: auto;    
+}
+.card-top{
+    text-align: center;
+}
+ </style>
     </head>
 <body>
-    <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <h1> CADASTRO</h1>
-    </div>
-    <div class="col-8 m-auto pt-4 pb-2 text-center">
-        <a href="/"class="btn btn-info"> Voltar</a>
-    </div>
-    <div class="col-8 m-aut pt-4 pb-2 text-center">
+    
+    
+   
         <form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
-        {% csrf_token %}
-        <div class="form_group mt-4">Nome: {{form.nome}}</div>
-        <div class="form_group mt-4">CNPJ: {{form.cnpj}}</div>
-        <div class="form_group mt-4">Cep: {{form.cep}}</div>
-        <div class="form_group mt-4">Endereço: {{form.endereco}}</div>
-        <div class="form_group mt-4">Número: {{form.numero}}</div>
-        <div class="form_group mt-4">Bairro: {{form.bairro}}</div>
-        <div class="form_group mt-4">Municipio: {{form.municipio}}</div>
-        <div class="form_group mt-4">Estado: {{form.estado}}</div>
-        <div class="form_group mt-4">Email: {{form.email}}</div>
-        <div class="form_group mt-4">Senha: {{form.senha}}</div>
-        <div class="form_group mt-4">Confirme sua senha: {{form.confsenha}}</div>
+            <div class="card">
+                <div class="card-top">
+                    <div class="col-8 m-auto pt-3 pb-2 text-center">
+                        <h2> CADASTRO</h2>
+                    </div>
+                {% csrf_token %}
+
+                <div class="form_group mt-2">Nome: {{form.nome}}</div>
+                <div class="form_group mt-2">CNPJ: {{form.cnpj}}</div>
+                <div class="form_group mt-2">Cep: {{form.cep}}</div>
+                <div class="form_group mt-2">Endereço: {{form.endereco}}</div>
+                <div class="form_group mt-2">Número: {{form.numero}}</div>
+                <div class="form_group mt-2">Bairro: {{form.bairro}}</div>
+                <div class="form_group mt-2">Municipio: {{form.municipio}}</div>
+                <div class="form_group mt-2">Estado: {{form.estado}}</div>
+                <div class="form_group mt-2">Email: {{form.email}}</div>
+                <div class="form_group mt-2">Senha: {{form.senha}}</div>
+                <div class="form_group mt-2">Confirme sua senha: {{form.confsenha}}</div>
         </br>
-            <input type="submit" class="btn btn-success" value="Salvar">
-    </form>
-    </div>
+            
+            <div class="col-8 m-auto pt-4 pb-2 text-center">
+                <input type="submit" class="btn btn-success" value="Salvar">
+                <a href="/login"class="btn btn-info"> Voltar</a>
+            </div>    
+            </div>       
+            </div>
+        </form>
+    
     
 </body>
 </html>
