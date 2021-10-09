@@ -4,6 +4,60 @@
         <meta charset="UTF-8">
         <title>Cadastre-se</title>
         <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+    
+        <form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
+        
+            
+            <div class="col-8 m-auto pt-3 pb-2 text-center">
+                <h2> CADASTRO</h2>
+            </div>
+            {% csrf_token %}
+        <div class="col-3 m-auto pt-3 pb- text-center">
+            <label for="exampleInputNome" class="form-label">Nome</label>
+            <input type="name" class="form-control" id="exampleInputNome"  placeholder="Seu nome" ><br>
+
+            <label for="exampleInputCNPJ" class="form-label">CNPJ</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="CNPJ"><br>
+
+            <label for="exampleInputCep" class="form-label">Cep</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Cep" ><br>
+
+            <label for="exampleInputEndereço" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Endereço" ><br>
+
+            <label for="exampleInputNumero" class="form-label">Número</label>
+            <input type="number" class="form-control" id="exampleInputNome"  placeholder="Número" ><br>
+
+            <label for="exampleInputBairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Bairro" ><br>
+
+            <label for="exampleInputMunicipio" class="form-label">Município</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Seu município"><br>
+
+            <label for="exampleInputEstado" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Estado"><br>
+
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputNome"  placeholder="Email"><br>
+
+            <label for="exampleInputSenha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputSenha"  placeholder="Senha"><br>
+
+            <label for="exampleInputConfSenha" class="form-label">Confirme sua senha</label>
+            <input type="password" class="form-control" id="exampleInputSenha"  placeholder="Confirme sua senha" ><br>
+            <input type="submit" class="btn btn-secondary" value="Voltar">
+            <input type="submit" class="btn btn-success" value="Salvar">
+            &nbsp;
+            &nbsp;
+        </div> 
+    </form>
+</body>
+</html>
+
+<!--
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <style>
      body{
     background-color: #f0f0f0;
@@ -66,3 +120,4 @@
     
 </body>
 </html>
+-->
