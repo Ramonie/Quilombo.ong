@@ -7,16 +7,15 @@
     </head>
 <body>
     
-        <form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
+        <!--<form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
         
             
-            <div class="col-8 m-auto pt-3 pb-2 text-center">
-                <h2> CADASTRO</h2>
-            </div>
+         
             {% csrf_token %}
         <div class="col-3 m-auto pt-3 pb- text-center">
+            <h2> CADASTRO</h2>
             <label for="exampleInputNome" class="form-label">Nome</label>
-            <input type="name" class="form-control" id="exampleInputNome"  placeholder="Seu nome" ><br>
+            <input type="name" class="form-control" id="exampleInputNome"  placeholder="Seu nome"><br>
 
             <label for="exampleInputCNPJ" class="form-label">CNPJ</label>
             <input type="text" class="form-control" id="exampleInputNome"  placeholder="CNPJ"><br>
@@ -47,16 +46,19 @@
 
             <label for="exampleInputConfSenha" class="form-label">Confirme sua senha</label>
             <input type="password" class="form-control" id="exampleInputSenha"  placeholder="Confirme sua senha" ><br>
-            <input type="submit" class="btn btn-secondary" value="Voltar">
-            <input type="submit" class="btn btn-success" value="Salvar">
+                <div class="col-8 m-auto pt-4 pb-2 text-center">
+                    <a href="/login"class="btn btn-secondary"> Voltar</a>
+                    <input type="submit" class="btn btn-success" value="Salvar">
+                 </div>
             &nbsp;
+            
             &nbsp;
         </div> 
     </form>
 </body>
-</html>
+</html>-->
 
-<!--
+
     <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <style>
      body{
@@ -120,4 +122,4 @@
     
 </body>
 </html>
--->
+

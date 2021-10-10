@@ -20,11 +20,11 @@ from app.views import login
 from app.views import cadastro
 from app.views import create
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('login/', login, name='login'),
-    path('cadastro/', cadastro), 
-    path('create/', create),
-    
-    ]
+    path('cadastro/', cadastro, name='cadastro'), 
+    path('create/', create, name='create'),
+]
