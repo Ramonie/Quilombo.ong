@@ -3,54 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Cadastre-se</title>
-        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!--<link rel="stylesheet" href="style.css">-->
-        <style>
-            body{
-           background-color: #f0f0f0;
-       }
-       .formcadastro{
-           width: 400px;
-           margin: auto;
-           padding-top: 1px;
-       }
-       .card{
-           box-shadow: 1px 1px 5px #ccc;
-           background-color:#ccc;
-           padding: 30px;
-           border-radius: 5px;
-           width: 400px;
-           margin: auto;
-           padding-top: 4px;
-       }
-       .form_group mt-4{
-           text-align: auto; 
-              
-       }
-       .card-top{
-           text-align: center;
-           
-       }
-       .btn{
-           background-image: linear-gradient(to right, #f0f0ff, mediumaquamarine, #3305ff);
-       }
-       form{
-           animation-name: fade;
-           animation-direction: inherit;
-           animation-duration: 1s;
-       }
-       
-       @keyframes fade{
-           from{
-               opacity: 0;
-               transform: scale(0.9);
-           }
-           to{
-               opacity: 1;
-               transform: scale(1);
-           }
-       }
-        </style>
+        <!--<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/cadastro.css' %}">
 
     </head>
 
@@ -82,7 +37,7 @@
         
         <div class="col-8 m-auto pt-1 pb-1 text-center">
             <input type="submit" class="btn btn-success" value="Salvar">
-            <a href="/login"class="btn btn-info"> Voltar</a>
+            <button type="submit" class="btm btm-info"><a href="/login"  style="color: white"> Voltar</a></button>
         </div>    
         </div>       
         </div>
