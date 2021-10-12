@@ -19,7 +19,8 @@ from app.views import home
 from app.views import login
 from app.views import cadastro
 from app.views import create
-
+from app.views import perfil
+from app.views import publicacao
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,8 @@ urlpatterns = [
     path('login/', login, name='login'),
     path('cadastro/', cadastro, name='cadastro'), 
     path('create/', create, name='create'),
-   
+    path('perfil/', perfil, name='perfil'),
+    path('publicacao/', publicacao, name='publicar'),
+    
 ]
+

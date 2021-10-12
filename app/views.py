@@ -25,3 +25,9 @@ def create (request):
     if form.is_valid():
         form.save()
         return redirect('login')
+def perfil(request):
+    return render(request, 'perfil.html')
+
+
+def publicacao(request):
+    return render(request, 'publicacao.html')
