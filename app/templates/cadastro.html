@@ -56,10 +56,10 @@
         </div> 
     </form>
 </body>
-</html>-->
+</html>
 
 
-    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!----> <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <style>
      body{
     background-color: #f0f0f0;
@@ -67,7 +67,7 @@
 .formcadastro{
     width: 400px;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 1px;
 }
 .card{
     box-shadow: 1px 1px 5px #ccc;
@@ -76,13 +76,18 @@
     border-radius: 5px;
     width: 400px;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 4px;
 }
 .form_group mt-4{
-    text-align: auto;    
+    text-align: auto; 
+       
 }
 .card-top{
     text-align: center;
+    
+}
+.btn{
+    background-image: linear-gradient(to right, #f0f0ff, mediumaquamarine, #3305ff);
 }
  </style>
     </head>
@@ -93,25 +98,25 @@
         <form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
             <div class="card">
                 <div class="card-top">
-                    <div class="col-8 m-auto pt-3 pb-2 text-center">
+                    <div class="col-8 m-auto pt-1 pb-1 text-center">
                         <h2> CADASTRO</h2>
                     </div>
                 {% csrf_token %}
 
-                <div class="form_group mt-2">Nome: {{form.nome}}</div>
-                <div class="form_group mt-2">CNPJ: {{form.cnpj}}</div>
-                <div class="form_group mt-2">Cep: {{form.cep}}</div>
-                <div class="form_group mt-2">Endereço: {{form.endereco}}</div>
-                <div class="form_group mt-2">Número: {{form.numero}}</div>
-                <div class="form_group mt-2">Bairro: {{form.bairro}}</div>
-                <div class="form_group mt-2">Municipio: {{form.municipio}}</div>
-                <div class="form_group mt-2">Estado: {{form.estado}}</div>
-                <div class="form_group mt-2">Email: {{form.email}}</div>
-                <div class="form_group mt-2">Senha: {{form.senha}}</div>
-                <div class="form_group mt-2">Confirme sua senha: {{form.confsenha}}</div>
+                <div class="form_group mt-1" >Nome</br> {{form.nome}}</div>
+                <div class="form_group mt-1">CNPJ</br>{{form.cnpj}}</div>
+                <div class="form_group mt-1">Cep</br> {{form.cep}}</div>
+                <div class="form_group mt-1">Endereço</br>{{form.endereco}}</div>
+                <div class="form_group mt-1">Número</br> {{form.numero}}</div>
+                <div class="form_group mt-1">Bairro</br>{{form.bairro}}</div>
+                <div class="form_group mt-1">Municipio</br> {{form.municipio}}</div>
+                <div class="form_group mt-1">Estado</br>{{form.estado}}</div>
+                <div class="form_group mt-1">Email</br>{{form.email}}</div>
+                <div class="form_group mt-1">Senha</br>{{form.senha}}</div>
+                <div class="form_group mt-1">Confirme sua senha</br>{{form.confsenha}}</div>
         </br>
             
-            <div class="col-8 m-auto pt-4 pb-2 text-center">
+            <div class="col-8 m-auto pt-1 pb-1 text-center">
                 <input type="submit" class="btn btn-success" value="Salvar">
                 <a href="/login"class="btn btn-info"> Voltar</a>
             </div>    

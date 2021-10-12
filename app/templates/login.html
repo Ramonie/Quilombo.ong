@@ -44,8 +44,8 @@ body{
 
 }
 .card-group>button{
-    /*background-image: linear-gradient(to right, mediumaquamarine, #3305ff,#f0f0ff)*/
-    background-color: mediumaquamarine;
+    background-image: linear-gradient(to right, #f0f0ff, mediumaquamarine, #3305ff);
+    /*background-color: mediumaquamarine;*/
     width: 100%;
     border-radius: 30px;
     padding: 10px;
@@ -65,7 +65,7 @@ body{
     <form class="formlogin" action="">
         <div class="card">
             <div class="card-top">
-                <img class="imglogin"src="app\templates\logo.PNG"  width=60 height=40>
+                <img class="imglogin" src="media/logo.jpg"  width=60 height=40>
                 <h2 class="title">Login</h2>
             </div>
         <div class="card-group">
@@ -84,18 +84,19 @@ body{
         <div class="card-group">
             <button type="submit" value="Acessar">Acessar</button> 
             <button type="submit"><a href="/cadastro"class="btn btn-info"> Cadastre-se</a></button> 
+            <button type="submut"><a href="/"class="btn btn-info" > Home</a></button>
         </div>
     </div>
     </form>
-    <a href="/"class="btn btn-info" > Home</a>
+    
 
 
 exibindo dados do banco
 
  {% for dbs in db %} 
  <tr>
-    <th>{{dbs.id}} </th>
-    <th>{{dbs.nome}} </th>
+    
+    <th>{{dbs.nome}} </th></br>
 </tr>
  {% endfor %}
 </body>
