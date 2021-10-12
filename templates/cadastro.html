@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastre-se</title>
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="style.css">-->
+        <style>
+            body{
+           background-color: #f0f0f0;
+       }
+       .formcadastro{
+           width: 400px;
+           margin: auto;
+           padding-top: 1px;
+       }
+       .card{
+           box-shadow: 1px 1px 5px #ccc;
+           background-color:#ccc;
+           padding: 30px;
+           border-radius: 5px;
+           width: 400px;
+           margin: auto;
+           padding-top: 4px;
+       }
+       .form_group mt-4{
+           text-align: auto; 
+              
+       }
+       .card-top{
+           text-align: center;
+           
+       }
+       .btn{
+           background-image: linear-gradient(to right, #f0f0ff, mediumaquamarine, #3305ff);
+       }
+       form{
+           animation-name: fade;
+           animation-direction: inherit;
+           animation-duration: 1s;
+       }
+       
+       @keyframes fade{
+           from{
+               opacity: 0;
+               transform: scale(0.9);
+           }
+           to{
+               opacity: 1;
+               transform: scale(1);
+           }
+       }
+        </style>
+
+    </head>
+
+<body> 
+
+ 
+
+<body> 
+    <form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
+        <div class="card">
+            <div class="card-top">
+                <div class="col-8 m-auto pt-1 pb-1 text-center">
+                    <h2> CADASTRO</h2>
+                </div>
+            {% csrf_token %}
+
+            <div class="form_group mt-1" >Nome</br> {{form.nome}}</div>
+            <div class="form_group mt-1">CNPJ</br>{{form.cnpj}}</div>
+            <div class="form_group mt-1">Cep</br> {{form.cep}}</div>
+            <div class="form_group mt-1">Endereço</br>{{form.endereco}}</div>
+            <div class="form_group mt-1">Número</br> {{form.numero}}</div>
+            <div class="form_group mt-1">Bairro</br>{{form.bairro}}</div>
+            <div class="form_group mt-1">Municipio</br> {{form.municipio}}</div>
+            <div class="form_group mt-1">Estado</br>{{form.estado}}</div>
+            <div class="form_group mt-1">Email</br>{{form.email}}</div>
+            <div class="form_group mt-1">Senha</br>{{form.senha}}</div>
+            <div class="form_group mt-1">Confirme sua senha</br>{{form.confsenha}}</div>
+    </br>
+        
+        <div class="col-8 m-auto pt-1 pb-1 text-center">
+            <input type="submit" class="btn btn-success" value="Salvar">
+            <a href="/login"class="btn btn-info"> Voltar</a>
+        </div>    
+        </div>       
+        </div>
+    </form>
+    
+    
+</body>
+</html>
+
+<!--<form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
+            {% csrf_token %}
+        <div class="col-3 m-auto pt-3 pb- text-center">
+            <h2> CADASTRO</h2>
+            <label for="exampleInputNome" class="form-label">Nome</label>
+            <input type="name" class="form-control" id="exampleInputNome"  placeholder="Seu nome"><br>
+
+            <label for="exampleInputCNPJ" class="form-label">CNPJ</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="CNPJ"><br>
+
+            <label for="exampleInputCep" class="form-label">Cep</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Cep" ><br>
+
+            <label for="exampleInputEndereço" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Endereço" ><br>
+
+            <label for="exampleInputNumero" class="form-label">Número</label>
+            <input type="number" class="form-control" id="exampleInputNome"  placeholder="Número" ><br>
+
+            <label for="exampleInputBairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Bairro" ><br>
+
+            <label for="exampleInputMunicipio" class="form-label">Município</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Seu município"><br>
+
+            <label for="exampleInputEstado" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="exampleInputNome"  placeholder="Estado"><br>
+
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputNome"  placeholder="Email"><br>
+
+            <label for="exampleInputSenha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputSenha"  placeholder="Senha"><br>
+
+            <label for="exampleInputConfSenha" class="form-label">Confirme sua senha</label>
+            <input type="password" class="form-control" id="exampleInputSenha"  placeholder="Confirme sua senha" ><br>
+                <div class="col-8 m-auto pt-4 pb-2 text-center">
+                    <a href="/login"class="btn btn-secondary"> Voltar</a>
+                    <input type="submit" class="btn btn-success" value="Salvar">
+                 </div>
+            &nbsp;
+            
+            &nbsp;
+        </div> 
+    </form>
+</body>
+</html>-->
+
