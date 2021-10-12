@@ -1,0 +1,69 @@
+body{
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+.formlogin{
+    width: 500px;
+    margin: auto;
+    padding-top: 40px;
+}
+.card{
+    box-shadow: 1px 1px 5px #ccc;
+    background-color: #ccc;
+    padding: 30px;
+    border-radius: 5px;
+    
+}
+.card-top{
+    text-align: center;
+}
+.imglogin{
+    border-radius: 50px;
+    box-shadow: 10px 5px 5px #ccc;
+    background: url('logo.jpg') no-repeat left bottom;
+}
+
+.title{
+    color: maroon;
+}
+.card-group{
+    margin-bottom: 5px;
+}
+.card-group>input{
+    border-radius: 5px;
+    outline: #ccc;
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+}
+
+.card-group>button{
+    background-image: linear-gradient(to right, #f0f0ff, mediumaquamarine, #3305ff);
+    /*background-color: mediumaquamarine;*/
+    width: 31.1%;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+}
+.card-group>label{
+    width: 100%;
+    color:black;
+    display: block;
+    text-align: center;
+
+}
+form{
+    animation-name: fade;
+    animation-direction: inherit;
+    animation-duration: 1s;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
