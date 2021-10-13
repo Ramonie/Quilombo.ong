@@ -24,7 +24,7 @@ body{
 }
 
 .title{
-    color: maroon;
+    color: rgb(0, 0, 0);
 }
 .card-group{
     margin-bottom: 5px;
@@ -36,22 +36,25 @@ body{
     height: 25px;
     padding: 5px;
 }
-
+/*Botões*/
 .card-group>button{
-    background-image: linear-gradient(to right, #f0f0ff, mediumaquamarine, #3305ff);
-    /*background-color: mediumaquamarine;*/
+    /*background-image: linear-gradient(to right, #f0f0ff, mediumaquamarine, #3305ff);*/
+    background-color: rgb(201 170 127);
+    color: rgb(255, 255, 255);
     width: 31.1%;
     border-radius: 30px;
-    padding: 10px;
-    color: white;
+    padding: 10px;   
 }
+/*Descrição caixa de texto*/
 .card-group>label{
     width: 100%;
     color:black;
     display: block;
     text-align: center;
-
 }
+
+/*Aparição do form*/
+
 form{
     animation-name: fade;
     animation-direction: inherit;
