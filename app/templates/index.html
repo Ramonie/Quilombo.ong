@@ -20,16 +20,37 @@
 
 </head>
 <body>
-home
-<a href="/login"class="btn btn-info"> Acesso</a>
-<a href="/perfil"class="btn btn-info"> Perfil</a>
-<form class="navbar-form navbar-left">
-    <div class="form-group">
-      <input type="text" class="form-control">
-    </div>
-    <button type="submit" class="btn btn-default">Buscar</button>
-  </form>
-</ul>
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #5c4237;">
+  <a class="navbar-brand" href="#">
+    {% load static %}
+    <img class="logo" width="48" height="50" >
+  </a>
+  <a class="navbar-brand" href="#">Quilombo.ong</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="textoNavbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Home <span class="sr-only">(Página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login"class="btn btn-info"> Acesso</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/perfil"class="btn btn-info"> Perfil</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+      </form>
+    </span>
+  </div>
+</nav>
+
 
   <div class="container mt-4 mb-5">
     <div class="d-flex justify-content-center row">
@@ -45,7 +66,7 @@ home
                     <div>
                         <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
                             <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="https://i.imgur.com/aoKusnD.jpg" width="45">
-                                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
+                                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Quilombo.ong</span><span class="text-black-50 time">40 minutes ago</span></div>
                             </div>
                             <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                         </div>
@@ -57,7 +78,7 @@ home
                     <div>
                         <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
                             <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="https://i.imgur.com/aoKusnD.jpg" width="45">
-                                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
+                                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Quilombo.ong</span><span class="text-black-50 time">40 minutes ago</span></div>
                             </div>
                             <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                         </div>
