@@ -11,14 +11,12 @@
 
 <body> 
 
- 
-
 <body> 
     <form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
         <div class="card">
             <div class="card-top">
                 <div class="col-8 m-auto pt-1 pb-1 text-center">
-                    <h2> CADASTRO</h2>
+                    <h2 id="title"> Criar conta</h2>
                 </div>
             {% csrf_token %}
 
@@ -38,14 +36,26 @@
     </br>
         
         <div class="col-8 m-auto pt-1 pb-1 text-center">
-            <input type="submit" class="btn btn-success" value="Salvar">
-            <button type="submit" class="btm btm-info"><a href="/login"  style="color: white"> Voltar</a></button>
+            <input onmouseenter="entrar()" onmouseout="sair()" id="btn1" type="submit" class="btn btn-success" value="Salvar">
+            <button onmouseenter="entrar()" onmouseout="sair()" id="btn2" type="submit" class="btm btm-info"><a href="/login"  style="color: white"> Fazer login</a></button>
         </div>    
         </div>       
         </div>
     </form>
-    
-    
+    <script>
+        function entrar(){
+            var a = window.document.getElementById('btn1')
+            var a = window.document.getElementById('btn2')
+            a.style.background = 'rgb(167 142 107)'
+        }
+        function sair(){
+            var a = window.document.getElementById('btn1')
+            var a = window.document.getElementById('btn2')
+            a.style.background = 'rgb(201 170 127)'
+        }
+
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
