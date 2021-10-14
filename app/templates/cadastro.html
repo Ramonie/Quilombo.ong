@@ -12,7 +12,7 @@
 <body> 
 
 <body> 
-    <form name="formcadastro" id="formcadastro" action ="/create/" method="POST">
+    <form onsubmit="confSalvar()" name="formcadastro" id="formcadastro" action ="/create/" method="POST">
         <div class="card">
             <div class="card-top">
                 <div class="col-8 m-auto pt-1 pb-1 text-center">
@@ -33,25 +33,41 @@
                 Deve ter de 8 a 20 caracteres.
               </small></div>
             <div class="form_group mt-1">Confirme sua senha</br>{{form.confsenha}}</div>
-    </br>
-        
-        <div class="col-8 m-auto pt-1 pb-1 text-center">
+            </br>
+            
+            <div  class="col-8 m-auto pt-1 pb-1 text-center">
             <input onmouseenter="entrar()" onmouseout="sair()" id="btn1" type="submit" class="btn btn-success" value="Salvar">
             <button onmouseenter="entrar()" onmouseout="sair()" id="btn2" type="submit" class="btm btm-info"><a href="/login"  style="color: white"> Fazer login</a></button>
-        </div>    
-        </div>       
         </div>
+        </div>      
+        </div>       
+        
     </form>
     <script>
+        //function valida_senha(){
+            //if(document.getElementById('senha').value.length < 8){
+            //alert('A senha deve ter de 8 a 20 caracteres.');
+            //document.getElementById('senha').focus();
+            //return false
+        //}
+        //}
+
+        //Confirmar enviode form
+        function confSalvar(){
+            alert('Confirmar dados no formulário?')
+        }
+        //Botões
         function entrar(){
             var a = window.document.getElementById('btn1')
-            var a = window.document.getElementById('btn2')
             a.style.background = 'rgb(167 142 107)'
+            var b = window.document.getElementById('btn2')
+            b.style.background = 'rgb(167 142 107)'
         }
         function sair(){
             var a = window.document.getElementById('btn1')
-            var a = window.document.getElementById('btn2')
             a.style.background = 'rgb(201 170 127)'
+            var b = window.document.getElementById('btn2')
+            b.style.background = 'rgb(201 170 127)'
         }
 
     </script>
