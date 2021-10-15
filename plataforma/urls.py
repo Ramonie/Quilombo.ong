@@ -21,7 +21,8 @@ from app.views import cadastro
 from app.views import create
 from app.views import perfil
 from app.views import publicacao
-
+from app.views import sair
+from app.views import publicar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
@@ -29,7 +30,9 @@ urlpatterns = [
     path('cadastro/', cadastro, name='cadastro'), 
     path('create/', create, name='create'),
     path('perfil/', perfil, name='perfil'),
-    path('publicacao/', publicacao, name='publicar'),
+    path('publicacao/', publicacao, name='publicacao'),
+    path('sair/',sair , name='sair'),
+    path('publicar/',publicar, name='publicar'),
     
 ]
 

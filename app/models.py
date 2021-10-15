@@ -14,4 +14,7 @@ class Cadastro(models.Model):
     email = models.CharField(max_length= 100 )
     senha = models.CharField(max_length= 50 )
     confsenha =  models.CharField(max_length= 50,blank=True )
- 
+    
+
+#class Publicar(models.Model):
+    #publicacao = models.CharField(max_length=500)
