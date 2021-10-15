@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #5c4237;">
@@ -25,15 +26,13 @@
       {% load static %}
       <img class="logo rounded-circle" width="50" height="50" >
     </a>
-    <a class="navbar-brand" href="#">Quilombo.ong</a>
+    <a class="navbar-brand" href="/">Quilombo.ong</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="textoNavbar">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="">Home <span class="sr-only">(Página atual)</span></a>
-        </li>
+       
         <li class="nav-item">
           <a class="nav-link" href="/login"class="btn btn-info"> Acesso</a>
         </li>
@@ -54,17 +53,22 @@
 
 
   <div id="area">
-    <form id="formulario" autocomplete="off">
-      <fieldset>
-        <label>Titulo:</label><input class="campo_nome" type="text"><br>
-        <label>Email:</label><input class="campo_email" type="password"><br>
-        <label>Publicação:</label><br><textarea class="msg" cols="35" rows="8"></textarea><br>
-        <input class="btn_submit" type="submit" value="Enviar">
-      </fieldset>
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Titulo</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo da publicação">
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Publicação</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Anexar arquivo</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
-  </div>
-</body>
-</html>
 
 </body>
 </html>
