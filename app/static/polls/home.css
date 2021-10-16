@@ -34,3 +34,7 @@ input[type=text] {
     width: 100%;
     
   }
+#nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
