@@ -23,6 +23,7 @@ from app.views import perfil
 from app.views import publicacao
 from app.views import sair
 from app.views import publicar
+from app.views import informativo
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
@@ -33,6 +34,7 @@ urlpatterns = [
     path('publicacao/', publicacao, name='publicacao'),
     path('sair/',sair , name='sair'),
     path('publicar/',publicar, name='publicar'),
+    path('informativo/', informativo, name='informativo'),
     
 ]
 
