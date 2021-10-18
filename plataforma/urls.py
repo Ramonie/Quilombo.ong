@@ -37,5 +37,6 @@ urlpatterns = [
     path('publicar/',publicar, name='publicar'),
     path('informativo/', informativo, name='informativo'),
     path('accounts/', include('allauth.urls')),
+    
 ]
 

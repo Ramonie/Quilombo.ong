@@ -1,80 +1,10 @@
-{% extends 'base.html' %}
-
-{% load crispy_forms_tags %}
-
-{% block title %}Cadastro{% endblock %}
-
-{% block content %}
-{% csrf_token %}
-<form onsubmit="confSalvar()" name="formcadastro" id="formcadastro" action ="/create/" method="POST">
-    <div class="card">
-        <div class="card-top">
-            <div class="col-8 m-auto pt-1 pb-1 text-center">
-                <h2 id="title"> Criar conta</h2>
-            </div>
-        
-
-        <div class="form_group mt-1" >Nome</br> {{form.nome}}</div>
-        <div class="form_group mt-1">CNPJ</br>{{form.cnpj}}</div>
-        <div class="form_group mt-1">Cep</br> {{form.cep}}</div>
-        <div class="form_group mt-1">Endereço</br>{{form.endereco}}</div>
-        <div class="form_group mt-1">Número</br> {{form.numero}}</div>
-        <div class="form_group mt-1">Bairro</br>{{form.bairro}}</div>
-        <div class="form_group mt-1">Municipio</br> {{form.municipio}}</div>
-        <div class="form_group mt-1">Estado</br>{{form.estado}}</div>
-        <div class="form_group mt-1">Email</br>{{form.email}}</div>
-        <div class="form_group mt-1">Senha</br>{{form.senha}}<br><small id="passwordHelpInline" class="text-muted">
-            Deve ter de 8 a 20 caracteres.
-          </small></div>
-        <div class="form_group mt-1">Confirme sua senha</br>{{form.confsenha}}</div>
-        </br>
-        { form|crispy }}
-        <div  class="col-8 m-auto pt-1 pb-1 text-center">
-        <input onmouseenter="entrar()" onmouseout="sair()" id="btn1" type="submit" class="btn btn-success" value="Salvar">
-        <button onmouseenter="entrar()" onmouseout="sair()" id="btn2" type="submit" class="btm btm-info"><a href="/login"  style="color: white"> Fazer login</a></button>
-    </div>
-    </div>      
-    </div>       
-    
-</form>
-<script>
-    //function valida_senha(){
-        //if(document.getElementById('senha').value.length < 8){
-        //alert('A senha deve ter de 8 a 20 caracteres.');
-        //document.getElementById('senha').focus();
-        //return false
-    //}
-    //}
-
-    //Confirmar enviode form
-    function confSalvar(){
-        alert('Confirmar dados no formulário?')
-    }
-    //Botões
-    function entrar(){
-        var a = window.document.getElementById('btn1')
-        a.style.background = 'rgb(167 142 107)'
-        var b = window.document.getElementById('btn2')
-        b.style.background = 'rgb(167 142 107)'
-    }
-    function sair(){
-        var a = window.document.getElementById('btn1')
-        a.style.background = 'rgb(201 170 127)'
-        var b = window.document.getElementById('btn2')
-        b.style.background = 'rgb(201 170 127)'
-    }
-
-</script>
-<script src="script.js"></script>
-{% endblock %}
-
-<!--<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Cadastre-se</title>-->
-        <!--<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-        <!--{% load static %}
+        <title>Cadastre-se</title>
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'polls/cadastro.css' %}">
 
     </head>
@@ -106,6 +36,7 @@
             </br>
             
             <div  class="col-8 m-auto pt-1 pb-1 text-center">
+                {{ form|crispy }}
             <input onmouseenter="entrar()" onmouseout="sair()" id="btn1" type="submit" class="btn btn-success" value="Salvar">
             <button onmouseenter="entrar()" onmouseout="sair()" id="btn2" type="submit" class="btm btm-info"><a href="/login"  style="color: white"> Fazer login</a></button>
         </div>
