@@ -29,7 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('login/', login, name='login'),
-    path('cadastro/', cadastro, name='cadastro'), 
+    path('signup/', cadastro, name='cadastro'), 
     path('create/', create, name='create'),
     path('perfil/', perfil, name='perfil'),
     path('publicacao/', publicacao, name='publicacao'),
