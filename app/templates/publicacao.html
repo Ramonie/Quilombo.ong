@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Quilombo.ong{% endblock %}
+
+{% block content %}
+<div id="area">
+  <!--<form onsubmit="confSalvar()" name="formpublicacao" id="formpublicacao" action ="/publicar/" method="POST">-->>
+ <!--<form action="">
+    <div class="form-group">-->
+   <!--{% csrf_token %}-->
+      <label for="exampleFormControlTextarea1">Publicação</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Anexar arquivo</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+    
+    <button type="submit" class="btn btn-primary"><a href="/" style="color: white"> Publicar</a></button>
+  </form>
+{% endblock %}
+
+<!--<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -52,12 +74,12 @@
 
 
 
-  <div id="area">
+  <div id="area">-->
     <!--<form onsubmit="confSalvar()" name="formpublicacao" id="formpublicacao" action ="/publicar/" method="POST">-->>
-   <form action="">
-      <div class="form-group">
+   <!--<form action="">
+      <div class="form-group">-->
      <!--{% csrf_token %}-->
-        <label for="exampleFormControlTextarea1">Publicação</label>
+        <!--<label for="exampleFormControlTextarea1">Publicação</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
       <div class="form-group">
@@ -77,4 +99,4 @@
    </tr>
   {% endfor %}
 </body>
-</html>
+</html>-->
