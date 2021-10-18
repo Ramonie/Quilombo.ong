@@ -11,7 +11,7 @@
     {% load crispy_forms_tags %}
 
     {% block content %}  
-    <form class="formlogin">
+    <form class="formlogin" me>
         {% csrf_token%}
        
         <div class="card">
@@ -21,7 +21,7 @@
                 <img class="imglogin"   width=50 height=60>
                 <h2 class="title">Fazer login</h2>
             </div>
-        <div class="card-group">
+        <!--<div class="card-group">
             <label>Email:</label>
             <input type="email" name="email"placeholder="Digite seu email"required>
             
@@ -34,9 +34,10 @@
         <div class="card-group">
             <label><input type="checkbox">Lembre-me</label>
         </div>
-        <div class="card-group" >
+        <div class="card-group" >-->
             {{ form|crispy }}
-            <button onmouseenter="entrar()" onmouseout="sair()" id="btn1" type="submit" value="Acessar" class="acessar">Acessar</button> 
+            <button  type="submit">Entrar</button>
+           <!-- <button onmouseenter="entrar()" onmouseout="sair()" id="btn1" class="btn btn-success" type="submit" value="Acessar" class="acessar">Acessar</button>--> 
             <button onmouseenter="entrar()" onmouseout="sair()" id="btn2" type="submit"><a href="/cadastro"class="btn btn-info" style="color: white"> Cadastre-se</a></button> 
             <button onmouseenter="entrar()" onmouseout="sair()" id="btn3" type="submut"><a href="/"class="btn btn-info" style="color: white"> Home</a></button>
         </div>
