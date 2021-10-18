@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 /*Barra lateral*/
 #header {
   position: fixed;
-  top: 0;
+  top: 100px;
   left: 0;
   bottom: 0;
   width: 300px;
