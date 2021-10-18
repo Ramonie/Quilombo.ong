@@ -4,17 +4,17 @@
 
 {% block content %}
     <form class="formlogin" method="post">
-        <div class="card">
+        <div align="center" class="card">
             <div class="card-top">
 
                 {% load static %}
                 <img class="imglogin"   width=50 height=60>
                 <h2 class="title">Fazer login</h2>
             </div>
-            <div class="card-group">
+            <div  class="card-group">
                 {% csrf_token %}
                 {{ form|crispy }}
-        </div>
+            </div>
         <button  onmouseenter="entrar()" onmouseout="sair()" id="btn1"class="btn btn-success" type="submit">Entrar</button>
         </div>
     </form>

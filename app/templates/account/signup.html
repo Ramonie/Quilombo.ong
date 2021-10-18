@@ -12,13 +12,26 @@
         <img class="imglogin"   width=50 height=60>
         <h2 class="title">Cadastro</h2>
     </div>
-    <div class="form_group mt-1">
+    <div align="center" class="form_group mt-1">
     <form method="post" name="formcadastro" id="formcadastro">
         {% csrf_token %}
         {{ form|crispy }}
+        
+        <div align="center">
+        <label for="cnpj">CNPJ</label><br>
+        <input type="number" class="form-control" id="exampleInputcnpj" placeholder="xx.xxx.xxx/xxxx-xx">
+        </div>
+
+        <br>
         <button class="btn btn-success" type="submit" onmouseenter="entrar()" onmouseout="sair()" id="btn1" value="Salvar">Cadastrar</button>
         <button onmouseenter="entrar()" onmouseout="sair()" id="btn2" type="submit" class="btm btm-info"><a href="{% url 'account_login' %}"  style="color: white"> Fazer login</a></button>
+        
     </form>
     </div>
 </div>  
 {% endblock %}
+
+<!--<div class="form-group">
+    <label for="cnpj">CNPJ</label>
+    <input type="number" class="form-control" id="exampleInputcnpj" placeholder="CNPJ">
+  </div>-->
