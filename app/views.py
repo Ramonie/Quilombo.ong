@@ -18,7 +18,7 @@ def login (request):
 def cadastro (request):
     data = {}
     data['form'] = CadastroForm()
-    return render ( request ,'cadastro.html', data)
+    return render ( request ,'Cadastro.html', data)
 
 def create (request):
     form = CadastroForm(request.POST or None)
@@ -48,3 +48,4 @@ def publicar(request):
     return render (request , 'index.html')
 def informativo(request):
     return render(request, 'informativo.html')
+
