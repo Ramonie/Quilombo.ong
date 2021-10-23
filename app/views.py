@@ -1,3 +1,4 @@
+from typing import Text
 from django import http
 from django.shortcuts import redirect, render
 from django.http import request
@@ -8,6 +9,12 @@ from app.models import  Cadastro
 #from app.arquivo import ArquivoForm
 # Create your views here.
 def home (request):
+    # data = {}
+    #search = request.GET.get('search')
+    #if search:
+       # data['db'] = Cadastro.objects.filter(modelo__icontains=search)
+   # else:
+       #data['db'] = Cadastro.objects.all()
     return render (request , 'index.html')
 
 def login (request):

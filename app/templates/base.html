@@ -47,9 +47,9 @@
       class="navbar navbar-expand-lg navbar-dark"
       style="background-color: #5c4237"
     >
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         {% load static %}
-        <img class="logo rounded-circle" width="50" height="50" />
+        <img class="logo rounded-circle" width="45" height="45" />
       </a>
       <a class="navbar-brand" href="{% url 'home' %}">Quilombo.ong</a>
       <button
@@ -84,11 +84,12 @@
     </ul>-->
    </div>
   <div class="collapse navbar-collapse" id="textoNavbar">
-    <form class="text">
+    <form class="text" method ="get">
   <input
     type="text"
     class="form-control mr-sm-2 align-baseline"
     type="search"
+    id="search"
     placeholder="Encontre sua comunidade"
     aria-label="Pesquisar"
   />
