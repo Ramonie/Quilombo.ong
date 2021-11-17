@@ -3,9 +3,7 @@
 {% block title %}Quilombo.ong{% endblock %}
 
 {% block content %}
-<div id="area">
-  <!--<form onsubmit="confSalvar()" name="formpublicacao" id="formpublicacao" action ="/publicar/" method="POST">
- <form action="">-->
+<div class="col-md-8">
     <div class="form-group">
    
       <label for="exampleFormControlTextarea1">Publicação</label>
@@ -18,85 +16,6 @@
     
     <button type="submit" class="btn btn-primary"><a href="/" style="color: white"> Publicar</a></button>
   </form>
+</div>
 {% endblock %}
 
-<!--<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-   
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-    <title>Publicar</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/publicacao.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/index.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/home.css' %}">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #5c4237;">
-    <a class="navbar-brand" href="#">
-      {% load static %}
-      <img class="logo rounded-circle" width="50" height="50" >
-    </a>
-    <a class="navbar-brand" href="/">Quilombo.ong</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="textoNavbar">
-      <ul class="navbar-nav mr-auto">
-       
-        <li class="nav-item">
-          <a class="nav-link" href="/login"class="btn btn-info"> Acesso</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/perfil"class="btn btn-info"> Perfil</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
-      </span>
-    </div>
-  </nav>
-  
-
-
-
-  <div id="area">-->
-    <!--<form onsubmit="confSalvar()" name="formpublicacao" id="formpublicacao" action ="/publicar/" method="POST">-->>
-   <!--<form action="">
-      <div class="form-group">-->
-     <!--{% csrf_token %}-->
-        <!--<label for="exampleFormControlTextarea1">Publicação</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlFile1">Anexar arquivo</label>
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-      </div>
-      
-      <button type="submit" class="btn btn-primary"><a href="/" style="color: white"> Publicar</a></button>
-    </form>
-
-
-  
-  {% for dbs in db %} 
-    <tr>
-       <th>{{dbs.id}}</th>
-       <th>{{dbs.nome}} </th></br>
-   </tr>
-  {% endfor %}
-</body>
-</html>-->

@@ -23,7 +23,9 @@ body {
     background: url('logo.jpg') no-repeat left bottom;
 }
 
-
+.fachada{
+    background: url('fachada.jpg');
+}
 input[type=text] {
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;

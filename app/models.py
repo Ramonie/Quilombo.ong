@@ -18,3 +18,4 @@ class Cadastro(models.Model):
 
 #class Publicar(models.Model):
     #publicacao = models.CharField(max_length=500)
+   
