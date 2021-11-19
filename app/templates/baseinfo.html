@@ -64,24 +64,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="textoNavbar">
-       <!-- <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-        <a class="nav-link" href="">Home <span class="sr-only">(Página atual)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/login"class="btn btn-info"> Acesso</a>
-      </li>
       
-
-      <span class="navbar-text align-baseline">
-      <form class="form-inline ">
-        <input type="text" name="search" placeholder="Search..">
-        <input type= "text"class="form-control mr-sm-2" type="search" placeholder="Encontre sua comunidade" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
-  
-   </span>
-    </ul>-->
    </div>
   <div class="collapse navbar-collapse" id="textoNavbar">
     <form class="text">
@@ -101,32 +84,7 @@
     Buscar
   </button>
     </form>
-</div>
-<div class="nav-item" id="textoNavbar">
-  <ul class="navbar-nav mr-auto">
-    {% if user.is_authenticated %}
-    <li class="nav-item">
-        <a class="nav-link" href="/perfil"class="btn btn-info"> Perfil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/publicacao"class="btn btn-info"> Publicar</a>
-      </li>
-
-    <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Sair</a></li>
-    {% else %}
-       
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'account_signup' %}">Cadastre-se</a>
-    </li>
-    
-  
-  
-                    
-                 
-    
-                    {% endif %}
-                </ul>
-</div>  
+</div> 
 </nav>
 
 </header>

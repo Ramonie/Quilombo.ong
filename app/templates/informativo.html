@@ -7,22 +7,7 @@
   <div class="d-flex justify-content-center row">
     <div class="col-md-8">
       <div class="feed p-2">
-        <div
-          class="
-            d-flex
-            flex-row
-            justify-content-between
-            align-items-center
-            p-2
-            bg-white
-            border
-          "
-        >
         
-          <div class="feed-icon px-2">
-            <i class="fa fa-long-arrow-up text-black-50"></i>
-          </div>
-        </div>
         <div class="bg-white border mt-2">
           <div>
             <div
@@ -42,12 +27,10 @@
               <img class="logo rounded-circle" width="45" height="45" />
                 <div class="d-flex flex-column flex-wrap ml-2">
                   <span class="font-weight-bold">Quilombo.ong</span
-                  ><span class="text-black-50 time">40 minutes ago</span>
+                  >
                 </div>
               </div>
-              <div class="feed-icon px-2">
-                <i class="fa fa-ellipsis-v text-black-50"></i>
-              </div>
+              
             </div>
           </div>
           <div class="p-2 px-3">
@@ -55,241 +38,52 @@
               <h3>Seja Bem-Vindo (a) ao Quilombo.Ong!</h3>
                Somos um portal informativo e transparente , 
                   desenvolvido para conter informações das comunidades quilombolas no RN, 
-                  funcionando como uma rede social
-                  .</span
-            >
+                  funcionando como uma rede social.</span>
+                  <br>
+                  <form>
+                    <div>
+                      <h4>Confirme que esta de acordo com os termos abaixo:</h4>
+                    <input type = "checkbox" id = "subscribeNews" name = "chk1" value = "check1" required>
+                    <label for = ""> Subscreva a newsletter? </label></br>
+                    <input type = "checkbox" id = "subscribeNews" name = "subscribe" value = "newsletter"required>
+                    <label for = ""> Subscreva a newsletter? </label></br>
+                    <input type = "checkbox" id = "subscribeNews" name = "subscribe" value = "newsletter"required>
+                    <label for = ""> Subscreva a newsletter? </label><br>
+                    
+                      <button type = "submit"><a class="nav-link" href="{% url 'account_signup' %}">Cadastre-se</a> </button>
+                    
+                    </div>
+                    
+                  </form>
+                    
+                </div>
+                
+            
           </div>
-          <div class="d-flex justify-content-end socials p-2 py-3">
-            <i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i
-            ><i class="fa fa-share"></i>
-          </div>
+          
         </div>
         
           </div>
         </div>
       </div>
     </div>
+    <script language='javascript'>
+      function verifica_checkbox()
+      {
+         var chk1 = document.seu_form.chk1.checked;
+         var chk2 = document.seu_form.chk2.checked;
+      
+         if (chk1 == false)
+         {
+            alert('marque o check 1');
+            document.seu_form.chk1.focus();  
+            return false;
+         }
+         else if (chk1 == true)
+         {
+            alert('você marcou o checkbox certo!');
+         }
+         return true;
+      }
+      </script>
 {% endblock %}
-
-<!--<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-    <title>Home</title>
-    {% load static %}
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'polls/index.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'polls/home.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    />
-  </head>
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="background-color: #5c4237"
-    >
-      <a class="navbar-brand" href="#">
-        {% load static %}
-        <img class="logo rounded-circle" width="50" height="50" />
-      </a>
-      <a class="navbar-brand" href="/">Quilombo.ong</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#textoNavbar"
-        aria-controls="textoNavbar"
-        aria-expanded="false"
-        aria-label="Alterna navegação"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="textoNavbar">-->
-       <!-- <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-        <a class="nav-link" href="">Home <span class="sr-only">(Página atual)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/login"class="btn btn-info"> Acesso</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/perfil"class="btn btn-info"> Perfil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/publicacao"class="btn btn-info"> Publicar</a>
-      </li>
-
-
-      <span class="navbar-text align-baseline">
-      <form class="form-inline ">
-        <input type="text" name="search" placeholder="Search..">
-        <input type= "text"class="form-control mr-sm-2" type="search" placeholder="Encontre sua comunidade" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
-  
-   </span>
-    </ul>-->
-   <!--</div>
-  <div class="collapse navbar-collapse" id="textoNavbar">
-    <form class="text">
-  <input
-    type="text"
-    class="form-control mr-sm-2 align-baseline"
-    type="search"
-    placeholder="Encontre sua comunidade"
-    aria-label="Pesquisar"
-  />
-    </form>
-    <form class="text">
-  <button
-    class="btn btn-outline-success my-2 my-sm-0"
-    type="submit"
-  >
-    Buscar
-  </button>
-    </form>
-</div>
-<div class="nav-item" id="textoNavbar">-->
-  <!--<ul class="navbar-nav mr-auto">
-    <li><a class="nav-link" href="accounts/login.html"class="btn btn-info"> Cadastre-se</a></li>
-  </ul>-->
-  
-  <!--<li class="nav-item">
-    <a class="nav-link" href="{% url 'account_login' %}">Cadastre-se</a>
-</li>
-</div>  
-</nav>
-
-
-
-    <div class="container mt-4 mb-5">
-      <div class="d-flex justify-content-center row">
-        <div class="col-md-8">
-          <div class="feed p-2">
-            <div
-              class="
-                d-flex
-                flex-row
-                justify-content-between
-                align-items-center
-                p-2
-                bg-white
-                border
-              "
-            >
-            
-              <div class="feed-icon px-2">
-                <i class="fa fa-long-arrow-up text-black-50"></i>
-              </div>
-            </div>
-            <div class="bg-white border mt-2">
-              <div>
-                <div
-                  class="
-                    d-flex
-                    flex-row
-                    justify-content-between
-                    align-items-center
-                    p-2
-                    border-bottom
-                  "
-                >
-                  <div
-                    class="d-flex flex-row align-items-center feed-text px-2"
-                  >
-                    <img
-                      class="rounded-circle"
-                      src="https://i.imgur.com/aoKusnD.jpg"
-                      width="45"
-                    />
-                    <div class="d-flex flex-column flex-wrap ml-2">
-                      <span class="font-weight-bold">Quilombo.ong</span
-                      ><span class="text-black-50 time">40 minutes ago</span>
-                    </div>
-                  </div>
-                  <div class="feed-icon px-2">
-                    <i class="fa fa-ellipsis-v text-black-50"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="p-2 px-3">
-                <span>
-                  <h3>Seja Bem-Vindo (a) ao Quilombo.Ong!</h3>
-                   Somos um portal informativo e transparente , 
-                      desenvolvido para conter informações das comunidades quilombolas no RN, 
-                      funcionando como uma rede social
-                      .</span
-                >
-              </div>
-              <div class="d-flex justify-content-end socials p-2 py-3">
-                <i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i
-                ><i class="fa fa-share"></i>
-              </div>
-            </div>
-            
-              </div>
-            </div>
-          </div>
-        </div>
-    
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <
-</body>
-</html>->>

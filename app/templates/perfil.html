@@ -11,43 +11,50 @@
 />
 <div class="container rounded bg-white mt-5 mb-5">
   <div class="row">
+   
       <div class="col-md-3 border-right">
           <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-            {% load static %}
-            <img class="logo rounded-circle" width="45" height="45" />
+            <form action="/pagina-processa-dados-do-form" method="post">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <!--{% load static %}
+                    <img class="logo rounded-circle" width="45" height="45" />-->
+                    <h4 class="text-right">Perfil</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="Nome" value=""></div>
+                    
+                </div>
+                
+                <div class="row mt-2">
+                    
+                    <div class="col-md-6"><label class="labels">Nome</label><input type="text" class="form-control" value="" placeholder="Nome"></div>
+                </div>
             
-           <span class="font-weight-bold">Quilombo Nova Descoberta</span><span class="text-black-50">Quilombonovadescobertaim@gmail.com</span><span> </span></div>
+          </div>
       </div>
       <div class="col-md-5 border-right">
           <div class="p-3 py-5">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4 class="text-right">Perfil</h4>
-              </div>
-              <div class="row mt-2">
-                  <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                  <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
-              </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="text-right">Endereço</h4>
+            </div>
               <div class="row mt-3">
-                  <div class="col-md-12"><label class="labels">Telefone</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-                  <div class="col-md-12"><label class="labels">Endereço</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-    
-                  <div class="col-md-12"><label class="labels">CEP</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                  <div class="col-md-12"><label class="labels">Cidade</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                  <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
                   
+                  <div class="col-md-12"><label class="labels">Endereço</label><input type="text" class="form-control" placeholder="Endereço" value=""></div>
+                  <div class="col-md-12"><label class="labels">CEP</label><input type="text" class="form-control" placeholder="CEP" value=""></div>
+                  <div class="col-md-12"><label class="labels">Cidade</label><input type="text" class="form-control" placeholder="Cidade" value=""></div>
+                  <div class="col-md-6"><label class="labels">Estado</label><input type="text" class="form-control" value="" placeholder="Estado"></div>
+                  <div class="col-md-6"><label class="labels">Pais</label><input type="text" class="form-control" value="" placeholder="Pais"></div>
               </div>
-              <div class="row mt-3">
-                  <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                  <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
-              </div>
-              <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+              <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Salvar Perfil</button></div>
           </div>
       </div>
       <div class="col-md-4">
           <div class="p-3 py-5">
-              <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
-              <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
-              <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="text-right">Endereço</h4>
+            </div>
+              <div class="col-md-12"><label class="labels"></label>Email<input type="email" class="form-control" placeholder="experience" value="Email"></div> <br>
+              <div class="col-md-12"><label class="labels">Telefone</label><input type="text" class="form-control" placeholder="Telefone" value="Telefone"></div>
           </div>
       </div>
   </div>
