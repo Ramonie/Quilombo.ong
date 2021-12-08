@@ -1,4 +1,19 @@
-asgiref==3.4.1
-Django==3.2.8
-pytz==2021.3
-sqlparse==0.4.2
+asgiref==3.3.4
+certifi==2021.10.8
+cffi==1.15.0
+charset-normalizer==2.0.7
+cryptography==35.0.0
+defusedxml==0.7.1
+Django==3.2.3
+django-allauth==0.45.0
+-e git://github.com/maraujop/django-crispy-forms.git@93a873bc4123d8ea990fce02ca965e2a788398a6#egg=django_crispy_forms
+idna==3.3
+oauthlib==3.1.1
+pycparser==2.20
+PyJWT==2.3.0
+python3-openid==3.2.0
+pytz==2021.1
+requests==2.26.0
+requests-oauthlib==1.3.0
+sqlparse==0.4.1
+urllib3==1.26.7
