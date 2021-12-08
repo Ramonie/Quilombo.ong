@@ -154,7 +154,9 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL ="/"
+
+#criar uma condição
+LOGIN_REDIRECT_URL ="/perfil"  #criar condições, caso o usuário já possua cadastro completo mandar pra home '/', caso não mandar pra perfil '/perfil'
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True

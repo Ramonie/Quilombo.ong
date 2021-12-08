@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
-
-{% block title %}Quilombo.ong{% endblock %}
-
+{% extends 'base.html' %} {% load static %}
+<!--COmentário-->
+{% block title %} Quilombo.ong {% endblock %}
+<!--COmentário-->
 {% block content %}
 <div class="container mt-4 mb-5">
   <div class="d-flex justify-content-center row">
@@ -37,10 +37,9 @@
                 border-bottom
               "
             >
-              <div
-                class="d-flex flex-row align-items-center feed-text px-2"
-              >{% load static %}
-              <img class="logo rounded-circle" width="45" height="45" />
+              <div class="d-flex flex-row align-items-center feed-text px-2">
+                {% load static %}
+                <img class="logo rounded-circle" width="45" height="45" />
                 <div class="d-flex flex-column flex-wrap ml-2">
                   <span class="font-weight-bold">Quilombo.ong</span
                   ><span class="text-black-50 time">40 minutes ago</span>
@@ -53,10 +52,11 @@
           </div>
           <div class="p-2 px-3">
             <span
-              >Surgiu em torno de 1940 quando os sitios Pitombeira e Jaçaré se mudaram para as margens
-               da estrada que liga as cidades de Ielmo Marinho e Macaiba.Viviam da agricultura de subsistência,
-                produziam mandioca, feijão, milho, algodão, dentre outras. O algodão produzido era vendido para
-                 fazendeiros da região..</span
+              >Surgiu em torno de 1940 quando os sitios Pitombeira e Jaçaré se
+              mudaram para as margens da estrada que liga as cidades de Ielmo
+              Marinho e Macaiba.Viviam da agricultura de subsistência, produziam
+              mandioca, feijão, milho, algodão, dentre outras. O algodão
+              produzido era vendido para fazendeiros da região..</span
             >
           </div>
           <div class="d-flex justify-content-end socials p-2 py-3">
@@ -76,11 +76,9 @@
                 border-bottom
               "
             >
-              <div
-                class="d-flex flex-row align-items-center feed-text px-2"
-              >
-              {% load static %}
-              <img class="logo rounded-circle" width="45" height="45" />
+              <div class="d-flex flex-row align-items-center feed-text px-2">
+                {% load static %}
+                <img class="logo rounded-circle" width="45" height="45" />
                 <div class="d-flex flex-column flex-wrap ml-2">
                   <span class="font-weight-bold">Quilombo.ong</span
                   ><span class="text-black-50 time">40 minutes ago</span>

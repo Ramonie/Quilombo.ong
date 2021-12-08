@@ -8,6 +8,7 @@ from app.models import  Cadastro
 #from app.publicar import PubliForm
 #from app.arquivo import ArquivoForm
 # Create your views here.
+
 def home (request):
     # data = {}
     #search = request.GET.get('search')
@@ -32,6 +33,7 @@ def create (request):
     if form.is_valid():
         form.save()
         return redirect('login')
+    
 def perfil(request):
     return render(request, 'perfil.html')
 
