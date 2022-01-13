@@ -11,7 +11,7 @@
                 <img class="imglogin"   width=50 height=60>
                 <h2 class="title">Fazer login</h2>
                 <p>Se você não tiver criado uma conta ainda, então, por favor
-                    <a href="/accounts/signup/">Cadastre-se</a> primeiro.</p>
+                    <a href="/accounts/signup/" >Cadastre-se</a> primeiro.</p>
             </div>
             <div  class="card-group">
                 {% csrf_token %}
@@ -19,9 +19,9 @@
             </div>
         <button  onmouseenter="entrar()" onmouseout="sair()" id="btn1"class="btn btn-success" type="submit">Entrar</button>
         <button  onmouseenter="entrar()" onmouseout="sair()" id="btn1"class="btn btn-success" type="submit"> 
-            <a class="button secondaryAction" href="/accounts/password/reset/">Redefinir senha?</a></button>
+            <a class="button secondaryAction" href="/accounts/password/reset/" style="color: white">Redefinir senha?</a></button>
         <button  onmouseenter="entrar()" onmouseout="sair()" id="btn1"class="btn btn-success" type="submit"> 
-            <a class="button secondaryAction" href="/">Home</a></button>
+            <a class="button secondaryAction" href="/" style="color: white">Home</a></button>
         </div>
     </form>
 {% endblock %}
