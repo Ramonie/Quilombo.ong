@@ -40,17 +40,15 @@
                   desenvolvido para conter informações das comunidades quilombolas no RN, 
                   funcionando como uma rede social.</span>
                   <br>
-                  <form method="post">
+                  <form method="post" requerid>
                     <div>
                       <h4>Confirme que esta de acordo com os termos abaixo:</h4>
-                    <input type = "checkbox" id = "chk1" name = "chk1" value = "check1" required>
+                    <input type = "checkbox" id = "chk1" name = "chk1" value = "check1" >
                     <label for = ""> Subscreva a newsletter? </label><br>
-                    <input type = "checkbox" id = "chk2" name = "chk2" value = "newsletter"required>
-                    <label for = ""> Subscreva a newsletter? </label><br>
-                    <input type = "checkbox" id = "chk3" name = "chk3" value = "newsletter"required>
-                    <label for = ""> Subscreva a newsletter? </label><br>                
-                      <button type = "submit"><a class="nav-link" href="{% url 'account_signup' %}">Cadastre-se</a> </button>
+                                
+                     
                     </div>
+                    <button type = "submit"><a class="nav-link" href="{% url 'account_signup' %}">Cadastre-se</a> </button>
                   </form>
                     
                 </div>
