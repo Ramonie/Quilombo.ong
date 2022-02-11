@@ -4,64 +4,124 @@
 
 {% block content %}
 {% load static %}
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{% static 'polls/perfil.css' %}"
-/>
+{%csrf_token%}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/perfil.css' %}">
 <div class="container rounded bg-white mt-5 mb-5">
-  <div class="row">
+    <div class="row">
    
-      <div class="col-md-3 border-right">
-          <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-            <form action="/pagina-processa-dados-do-form" method="post">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                
+                <form action="/pagina-processa-dados-do-form" method="post">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <!--{% load static %}
-                    <img class="logo rounded-circle" width="45" height="45" />-->
-                    <h4 class="text-right">Perfil</h4>
+                    {% load static %}
+                    <!--<img class="logo rounded-circle" width="45" height="45" />-->
+                 
+                <h4 class="text-right">Perfil</h4>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="Nome" value=""></div>
-                    
+
+                <div>
+                <div class="text-left">Nome completo:</div>
+                <label>
+                <input type="text" name="Nome" id="Nome" placeholder="Digite seu nome" required pattern="[a-zA-Z\s]+$"/>
+                </label>
+                    <!--<div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="nome" value=""></div>-->
                 </div>
                 
+                <!--<input type="text" name="name"  maxlength="64" placeholder="Nome" class="textinput textInput form-control" required="" id="name">
                 <div class="row mt-2">
-                    
-                    <div class="col-md-6"><label class="labels">Nome</label><input type="text" class="form-control" value="" placeholder="Nome"></div>
-                </div>
+                    <div class="col-md-6"><label class="labels">Nome</label><input type="text" class="form-control" value="" name ="nome" placeholder="Nome"></div>
+                </div>-->
+            </div>
+        </div>
+        <!--Utilizando a tributo pattern e required para validação-->
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="text-right">Endereço</h4>
+            </div>
             
-          </div>
-      </div>
-      <div class="col-md-5 border-right">
-          <div class="p-3 py-5">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4 class="text-right">Endereço</h4>
+            <div>
+            <div>Endereço:</div>
+            <label>
+            <input type="text" name="Endereço" id="Endereço" placeholder="Endereço" required pattern="[a-z\s]{0-9}+$"/>
+            </label>
             </div>
-              <div class="row mt-3">
-                  
-                  <div class="col-md-12"><label class="labels">Endereço</label><input type="text" class="form-control" placeholder="Endereço" value=""></div>
-                  <div class="col-md-12"><label class="labels">CEP</label><input type="text" class="form-control" placeholder="CEP" value=""></div>
-                  <div class="col-md-12"><label class="labels">Cidade</label><input type="text" class="form-control" placeholder="Cidade" value=""></div>
+
+            <div>
+                <div>CEP:</div>
+                <label>
+                <input type="cep" name="CEP" id="CEP" placeholder="Ex:.00000-000" required pattern="\d{5}\d{3}"/>
+                </label>
+            </div>
+
+            <div>
+                <div>Cidade:</div>
+                <label>
+                <input type="text" name="Cidade" id="Cidade" placeholder="Digite sua cidade" required pattern="[a-z\s]+$"/>
+                </label>
+            </div>
+
+            <div>
+                <div>Estado:</div>
+                <label>
+                <input type="text" name="Estado" id="Estado" placeholder="Digite seu estado" required pattern="[a-z\s]+$"/>
+                </label>
+            </div>
+             
+            <div>
+            <div>País:</div>
+                <label>
+                <input type="text" name="Pais" id="Pais" placeholder="Digite seu País" required pattern="[A-z\s]+$"/>
+                </label>
+            </div>
+             
+            <div>
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso</a></label>
+                
+            </div>
+                
+            </div>
+            <div align=center>
+                <input type="submit" id="btn-submit" value="Salvar Perfil">
+            </div>
+
+            
+             
+
+
+                
+                <!--<div class="col-md-12"><label class="labels">Endereço</label><input type="text" class="form-control" placeholder="Endereço" name ="nome" value=""></div>
+                  <div class="col-md-12"><label class="labels">CEP</label><input type="text" class="form-control" placeholder="CEP" name ="nome" value=""></div>
+                  <div class="col-md-12"><label class="labels">Cidade</label><input type="text" class="form-control" placeholder="Cidade" name ="nome" value=""></div>
                   <div class="col-md-6"><label class="labels">Estado</label><input type="text" class="form-control" value="" placeholder="Estado"></div>
-                  <div class="col-md-6"><label class="labels">Pais</label><input type="text" class="form-control" value="" placeholder="Pais"></div>
-              </div>
-              <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Salvar Perfil</button></div>
-          </div>
-      </div>
-      <div class="col-md-4">
+                  <div class="col-md-6"><label class="labels">Pais</label><input type="text" class="form-control" value="" placeholder="Pais"></div>-->  
+              
+                  <!--BOTÃO DE SALVAR PERFIL-->
+              <!--<div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" onclick="validar">Salvar Perfil</button></div>-->
+          
+            </div>
+        </div>
+      <!--<div class="col-md-4">
           <div class="p-3 py-5">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h4 class="text-right">Endereço</h4>
             </div>
-              <div class="col-md-12"><label class="labels"></label>Email<input type="email" class="form-control" placeholder="experience" value="Email"></div> <br>
+              <div class="col-md-12"><label class="labels"></label>Email<input type="email" class="form-control" placeholder="Emailfcjxdfjdj" value="Email"></div> <br>
               <div class="col-md-12"><label class="labels">Telefone</label><input type="text" class="form-control" placeholder="Telefone" value="Telefone"></div>
           </div>
-      </div>
+      </div>-->
   </div>
 </div>
 </div>
 </div>
+<p class=""error-validation template>  </p>
+<script>
 
+</script>
 {% endblock %}
 
 
