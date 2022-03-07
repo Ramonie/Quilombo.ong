@@ -87,10 +87,10 @@
                             Eu li e aceito os termos de uso 
                             <a target="_blank" href="#">termos de uso<a>.
                         </p>
-                        <input type="submit" class="btn btn-terciary"  name="envia" id="envia" value= "Cadastre-se" onclick = "cad()">
+                        <input type="submit" class="btn btn-terciary"  name="envia" id="envia" value= "Cadastre-se" onclick = "cad()" disabled>
                         <script>
                           function cad(){
-                            window.open("{% url 'account_signup' %}", "top");
+                            window.open("{% url 'account_signup' %}");
                           }
                         </script>
                         
