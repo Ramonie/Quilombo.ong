@@ -33,24 +33,71 @@
               
             </div>
           </div>
-          <div class="p-2 px-3">
+          <article class="p-2 px-3">
+            
             <span>
               <h3>Seja Bem-Vindo (a) ao Quilombo.Ong!</h3>
-               Somos um portal informativo e transparente , 
+               Somos um portal informativo e transparente, 
                   desenvolvido para conter informações das comunidades quilombolas no RN, 
                   funcionando como uma rede social.</span>
                   <br>
-                  <form  method="post" >
-                    <div>
+                  <!--<form  method="post" >
+                    <article>
                       <h4>Confirme que esta de acordo com os termos abaixo:</h4>
-                    <input type = "checkbox" id = "chk1" name = "chk1" value = "check1" required>
-                    <label for = ""> Subscreva a newsletter? </label><br>
-                                
-                     
-                    </div>
-                    <button type = "submit"><a class="nav-link" href="{% url 'account_signup' %}">Cadastre-se</a> </button>
-                  </form.charfield>
+                      <input type="checkbox" id="termos_de_contrato" / onclick="alerte()"><label
+                      for="termos_de_contrato"
+                    >
+                      Afirmo que li todo o contrato</label
+                    >
                     
+                    <script type="text/javascript">
+                     function alerte() {
+                      let checkbox = document.getElementById("termos_de_contrato");
+                      if (checkbox.checked) {
+                      redirect("Você confirmou que está de acordo com os nossos termos de uso!");
+                      } else {
+                     return(informativo.html);
+                      }
+                                  }
+
+                    </script>
+                    
+                  </article>
+                    <button type = "submit" id="confirma" / onclick="confirma()"><a class="nav-link" href="{% url 'account_signup' %}">Cadastre-se</a> </button>
+                    <script type="text/javascript">
+                      
+                    </script>
+                  </form.charfield>-->
+                  <div class="modal-body">
+                    <!--botão termos de uso-->
+                    <script>   
+                        function HabiDsabi(){  
+                            if(document.getElementById('habi').checked == true){ 
+                                document.getElementById('envia').disabled = ""  
+                            }  
+                            if(document.getElementById('habi').checked == false){ 
+                                document.getElementById('envia').disabled = "disabled"  
+               
+                           }
+                        }
+                    </script>
+                    <form name="form1">
+                        <p>
+                            <input type="checkbox" name="habi" id="habi" onClick="HabiDsabi()">  
+                            Eu li e aceito os termos de uso 
+                            <a target="_blank" href="#">termos de uso<a>.
+                        </p>
+                        <input type="submit" class="btn btn-terciary"  name="envia" id="envia" value= "Cadastre-se" onclick = "cad()">
+                        <script>
+                          function cad(){
+                            window.open("{% url 'account_signup' %}", "top");
+                          }
+                        </script>
+                        
+                        
+                      
+                    <!-- fim do botão -->
+               </div>
                 </div>
                 
             
@@ -62,23 +109,5 @@
         </div>
       </div>
     </div>
-    <script language='javascript'>
-      function verifica_checkbox()
-      {
-         var chk1 = document.seu_form.chk1.checked;
-         var chk2 = document.seu_form.chk2.checked;
-      
-         if (chk1 == false)
-         {
-            alert('marque o check 1');
-            document.seu_form.chk1.focus();  
-            return false;
-         }
-         else if (chk1 == true)
-         {
-            alert('você marcou o checkbox certo!');
-         }
-         return true;
-      }
-      </script>
+    
 {% endblock %}
