@@ -22,13 +22,13 @@
     <div class="form-row">
         <div class="form-group col-md-3">
         <label for="inputNone">Nome </label>
-        <input type="text" class="form-control" id="nome" placeholder="Nome" required pattern="[a-z\s]{0-9}+$"/>
+        <input type="text" class="form-control" id="nome" placeholder="{{user.username}}" required pattern="[a-z\s]{0-9}+$"/>
         </div>
 
         <div class="form-group col-md-3">
         <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="exemplo@gmail.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+[gmail]" title="Invalid email address" />
-        </div>s
+        <input type="email" class="form-control" id="email" placeholder="{{user.email}}" pattern="[^@\s]+@[^@\s]+\.[^@\s]+[gmail]" title="Invalid email address" />
+        </div>
     </div>
 
     <div class="form-row">
