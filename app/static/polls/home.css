@@ -1,9 +1,10 @@
 body {
-    background-color: #eee
+    background-color: #eee;
+    transition: 1s;
 }
 
 .time {
-    font-size: 9px !important
+    font-size: 9px !important;
 }
 
 .socials i {
@@ -26,7 +27,7 @@ body {
 .fachada{
     background: url('fachada.jpg');
 }
-input[type=text] {
+/* input[type=text] {
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
@@ -37,7 +38,42 @@ input[type=text] {
   input[type=text]:focus {
     width: 100%;
     
-  }
+  } */
 .text{
     text-align: center;
+}
+
+.search{
+    display: flex;
+    gap: 6px;
+}
+.mobile-nav{
+    display: block;
+}
+.bardesk{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+@media (max-width: 1000px) {
+    .search{
+        display: none !important;
+    }
+    .mobile-nav{
+        margin-top: 0.9em;
+        position: absolute;
+        z-index: 2;
+        background: #5c4237;
+        margin-left: -4em;
+        padding: 1em 1.5em 1em 3em;
+        text-align: end;
+        display: none;
+        transition: 1s;
+    }
+}
+
+@media(min-width:1001px){
+    .mobile-nav{
+        display: block !important;
+    }
 }
