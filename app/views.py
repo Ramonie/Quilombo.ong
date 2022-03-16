@@ -50,6 +50,6 @@ def sair(request):
 def publicar(request):
     
     return render (request , 'index.html')
-def info(request):
+def informativo(request):
     return render(request, 'informativo.html')
 
