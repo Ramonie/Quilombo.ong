@@ -48,13 +48,8 @@ def sair(request):
 
 
 def publicar(request):
-    #form = PubliForm(request.POST or None)
-    #form = CadastroForm(request.POST or None)
-    #form = ArquivoForm(request.POST or None)
-    #if form.is_valid():
-        #form.save()
-        #return redirect('index.html')
+    
     return render (request , 'index.html')
-def informativo(request):
+def info(request):
     return render(request, 'informativo.html')
 
