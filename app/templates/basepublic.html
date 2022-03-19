@@ -49,9 +49,9 @@
       </div>
 
 
-      <div class="nav-item" id="textoNavbar">
+      <div class="nav-item" id="textoNavbar" style="padding-left: 900px;">
         {% if user.is_authenticated %}
-
+        {% load static %}
         <button class="navbar-toggler" type="button"  onclick="abrirMenu()" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -66,7 +66,7 @@
               <a class="nav-link" href="/perfil" class="btn btn-info"  id="a-perfil">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/publicacao" class="btn btn-info" id="a-publicacao">Publicar</a>
+              <a class="nav-link" href="/publicacao" class="btn btn-info" id="a-publicacao"active >Publicar</a>
             </li>
 
             <li class="nav-item">
@@ -89,8 +89,8 @@
   <main class="container">
     {% block content %} {% endblock %}
   </main>
-
-  <script src="{% static 'js/polls/functions.js' %}"></script>
+  {% load static %}
+  <script src='{% static "../static/polls/js/function.js"}'></script>
 </body>
 
 </html>

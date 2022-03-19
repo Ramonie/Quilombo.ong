@@ -35,22 +35,21 @@
         <a class="navbar-brand" href="{% url 'home' %}">Quilombo.ong</a>
       </div>
 
-      <div class="search" id="textoNavbar">
-        <form class="text" method="get">
-          <input type="text" class="form-control mr-sm-2 align-baseline" type="search" id="search"
-            placeholder="Encontre sua comunidade" aria-label="Pesquisar" /><button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Buscar
-            </button>
+      <div class="search" id="textoNavbar"  style="padding-left: 9cm;">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
         </form>
+      
 
        
       </div>
-
-
-      <div class="nav-item" id="textoNavbar">
+    
+      <div class="nav-item" id="textoNavbar" style="padding-left: 6cm;" >
         {% if user.is_authenticated %}
-
-        <button class="navbar-toggler" type="button"  onclick="abrirMenu()" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        {% load static %}
+        <button class="navbar-toggler" type="button"  onclick="abrirMenu()"
+         aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -75,7 +74,7 @@
 
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
 
-            <li class="nav-item">
+            <li class="nav-item" style="padding-left: 2cm;">
               <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
             </li>
             <li class="nav-item">
@@ -90,8 +89,9 @@
   <main class="container">
     {% block content %} {% endblock %}
   </main>
-
-  <script src="{% static 'js/polls/functions.js' %}"></script>
+  {% load static %}
+  <script src='{% static "../static/polls/js/function.js"}'>
+</script>
 </body>
 
 </html>
