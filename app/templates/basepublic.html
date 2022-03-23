@@ -10,7 +10,13 @@
   <meta content="" name="description"/>
   <meta content="" name="keywords"/>
   <title>{% block title%} {% endblock%}</title>
-  {% block links%} {% endblock%}
+  {% block links%} 
+  
+
+    <link rel="stylesheet" type="text/css" href="../static/polls/publi.css" />
+    <link rel="stylesheet" type="text/css" href="../static/polls/publicar.css"/>
+
+  {% endblock%}
   <link rel="stylesheet" type="text/css" href="{% static 'polls/home.css' %}" />
   <link rel="stylesheet" type="text/css" href="../static/polls/{% block page%}{% endblock%}">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
@@ -49,40 +55,44 @@
       </div>
 
 
-      <div class="nav-item" id="textoNavbar" style="padding-left: 900px;">
+      <div class="nav-item" id="textoNavbar" >
         {% if user.is_authenticated %}
-        {% load static %}
-        <button class="navbar-toggler" type="button"  onclick="abrirMenu()" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="mobile-nav" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0"  style="--bs-scroll-height: 1000;">
             <li class="nav-item">
-              <a class="nav-link" href="/" id="a-home">Início</a>
+              <a class="nav-link active" aria-current="page" href="/" > Inicio</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/perfil" class="btn btn-info"  id="a-perfil">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/publicacao" class="btn btn-info" id="a-publicacao"active >Publicar</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/perfil" class="btn btn-info">
+              Perfil</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/publicacao" class="btn btn-info">
+              Publicar</a
+            >
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_logout' %}" id="a-sair">Sair</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_logout' %}">Sair</a>
+          </li>
           </ul>
-        {% else %}
-
+          {% else %}
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/informativo" class="btn btn-info">
+              Cadastre-se</a
+            >
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
-            </li>
-          </ul>
-        </div>
-        {% endif %}
+          {% endif %}
     </nav>
   </header>
 
@@ -90,7 +100,7 @@
     {% block content %} {% endblock %}
   </main>
   {% load static %}
-  <script src='{% static "../static/polls/js/function.js"}'></script>
+  <script src='{% static "../static/polls/js/scripts.js"}'></script>
 </body>
 
 </html>

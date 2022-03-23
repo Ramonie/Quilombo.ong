@@ -8,15 +8,36 @@
 
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/perfil.css' %}">
+<link rek="stylesheet" type="text/css" href="/app/static/polls/publicar.css">
 
 
-    <!--<form action="/pagina-processa-dados-do-form" method="post">
-    <div class="d-flex justify-content-between align-items-center mb-3">-->
-    <!--<img class="logo rounded-circle" width="45" height="45" />-->
         {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/perfil.css' %}">
-<h2>Perfil</h2>
+<div class="row">
+    <div class="card">
+        <div class="container mt-4 mb-5" id="body">
+            <div class="d-flex justify-content-center row">
+              <div class="col-md-8">
+                <div class="feed p-2">
+                  <div class="div-geral">
+                    <div class="div-one">
+                      <h1 class="titulo-page">Perfil</h2>
+
+    <div class="previews">
+        <div>
+          <input type="file" name="file" id="img-input" class="inputfile">
+          <label for="img-input" class="label_input-img">
+              {% load static %}
+            <img src="../static/img/cam.svg" alt="" srcset="">
+            Imagem
+          </label>
+        </div>
+        <div class="preview" id="div-preview">
+          {% load static %}
+          <button class="button_fechar" onclick="apagarImg()">x</button>
+          <img  class="preview-img" id="preview" src="" alt="">
+        </div>
+      </div>
 <form>
     
     <div class="form-row">
@@ -72,10 +93,7 @@
         </div>
     </div>
 
-    <!--<div class="form-group">
-        <label for="inputAddress2">Endereço 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
-    </div>-->
+    
     
     <div class="form-row">
         <div class="form-group col-md-3">
@@ -95,10 +113,15 @@
     
     <button style="background: #5c4237"; type="submit" class="btn btn-primary">Salvar perfil</button>
     </form>
-
-<script>
-
-</script>
+</div>
+</div>
+                </div>
+              </div>
+            </div>
+        </div>
+</div>
+</div>
+<script src="../static/polls/js/script.js"></script>
 {% endblock %}
 
 
